@@ -1,0 +1,13 @@
+/*style*/
+
+body > div:nth-child(1) > div:nth-child(1) > div:nth-child(1){
+    background-color: #74345e;
+}
+/*body*/
+.table > tbody:nth-child(2) > tr:nth-child(1) > th:nth-child(1) > p:nth-child(1){
+    font-style: inherit;
+}
+/*footer*/
+body > footer:nth-child(4) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1){
+    background-color:#dd8037 ;
+}

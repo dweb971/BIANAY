@@ -16,7 +16,8 @@ public $adresse2;
 public $date;
 public $ville;
 public $codepostal;
-public $questionnaire;
+public $question;
+public $lieunaissance;
 
 
 public $message;
@@ -38,6 +39,7 @@ public $message;
         $this->codepostal=trim(htmlentities($datasForm["cp"]));
         $this->ville=trim(htmlentities(ucfirst($datasForm["ville"]))); 
         $this->date=trim(htmlentities($datasForm["date"]));
+        $this->lieunaissance=trim(htmlentities(strtoupper($datasForm["datenaissance"])));
     
 
         // executer envoyer_mail()

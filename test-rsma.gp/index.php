@@ -143,14 +143,18 @@
                     <label for="inputmetier">Possédez-vous un dîplome? (Si oui lequel?): <span class="obj">(*)</span></label>
                     <div class="form-check form-check-inline">
                         <input class="form-check-input" type="radio" name="niveau" id="niveau"
-                            value="oui">
+                            value="oui" required>
                         <label class="form-check-label" for="">Oui </label>
                     </div>
                     <div class="form-check form-check-inline">
                         <input class="form-check-input" type="radio" name="niveau" id="niveau2"
-                            value="non">
+                            value="non" required>
                         <label class="form-check-label" for="">Non </label>
                     </div>
+
+                    <div class="valid-feedback">Looks good!</div>
+                <div class="invalid-feedback">Indiquez votre réponse!!!</div>
+                <small id="" class="form-text text-muted"> Sélectionnez votre réponse.</small>
                 </div>
                 <div class="form-group" id="niveauD" style="display:none">
                         <input name="niveauD" type="text" class="form-control" id="nD" aria-describedby=""
@@ -170,7 +174,7 @@
                     <label for="inputmetier">JDC effectuée: <span class="obj">(*)</span></label>
                     <div class="form-check form-check-inline">
                         <input class="form-check-input" type="radio" name="jdc" id="journeeD"
-                            value="oui">
+                            value="oui" required>
                         <label class="form-check-label" for="">Oui </label>
                     </div>
                     <div class="form-check form-check-inline">
@@ -178,15 +182,18 @@
                             value="non">
                         <label class="form-check-label" for="">Non </label>
                     </div>
+                    <div class="valid-feedback">Looks good!</div>
+                <div class="invalid-feedback">Indiquez votre réponse!!!</div>
+                <small id="" class="form-text text-muted"> Sélectionnez un réponse.</small>
                 </div>
                 
 
                 <div class="form-group ">
-                    <label for="inputville">Lieu de naissance: <span class="obj">(*)</span></label>
-                    <input name="ville" type="text" style="text-transform: uppercase" class="form-control"
-                        id="inputCity" placeholder="BASSE-TERRE" required>
+                    <label for="datenaissance">Lieu de naissance: <span class="obj">(*)</span></label>
+                    <input name="datenaissance" type="text" style="text-transform: uppercase" style="text-transform: uppercase" class="form-control"
+                        id="villenaissance" placeholder="BASSE-TERRE" required>
                     <div class="valid-feedback">Looks good!</div>
-                    <div class="invalid-feedback">Veuillez Indiquez votre Ville!!!</div>
+                    <div class="invalid-feedback"> Indiquez votre lieux de naissance!!!</div>
                     <small id="" class="form-text text-muted">Écrire votre lieu de naissance.</small>
                 </div>
              
@@ -318,11 +325,14 @@
                 </div>
 
                 <div class="form-check">
-  <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+  <input class="form-check-input" type="checkbox" value="" id="defaultCheck1" required>
   <label class="form-check-label" for="defaultCheck1">
 
     Acceptez-vous le RGPD? <a href="rgpd.php">lien vers le RGPD</a>
   </label>
+  <div class="valid-feedback">Looks good!</div>
+                <div class="invalid-feedback">Pour continuer sur notre site, Veuillez cocher  les conditions d'utilisation!!!</div>
+                <small id="" class="form-text text-muted"> Pour le respect de votre vie privée et vos données personnelles, cochez les conditions d'utilisation.</small>
 </div>
                 <div>
 

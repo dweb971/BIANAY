@@ -36,10 +36,10 @@ public $message;
         $this->adressse=trim(htmlentities(ucfirst ($datasForm["prenom"])));
         $this->adresse=trim(htmlentities($datasForm["adresse"]));
         $this->complementaire=trim(htmlentities($datasForm["adresse2"]));
-        $this->codepostal=trim(htmlentities($datasForm["cp"]));
+        $this->codepostal=trim(htmlentities($datasForm["code_postal"]));
         $this->ville=trim(htmlentities(ucfirst($datasForm["ville"]))); 
         $this->date=trim(htmlentities($datasForm["date"]));
-        $this->lieunaissance=trim(htmlentities(strtoupper($datasForm["datenaissance"])));
+        $this->lieunaissance=trim(htmlentities(strtoupper($datasForm["lieu_naissance"])));
     
 
         // executer envoyer_mail()
@@ -59,7 +59,8 @@ public $message;
             - prenom                   $this->prenom
         */
           // Le message
-          $this->message = "Bonjour $this->nom $this->prenom , \r\n merci pour votre inscription, voici le lien qui vous permettra d'accéder au test.";
+          $this->message = "Bonjour $this->nom $this->prenom , \r\nMerci pour votre inscription, voici le lien qui vous permettra d'accéder au test : 
+          https://test-rsma.gp/index.html.";
 
           // Dans le cas où nos lignes comportent plus de 70 caractères, nous les coupons en utilisant wordwrap()
           $this->message = wordwrap($this->message, 70, "\r\n");

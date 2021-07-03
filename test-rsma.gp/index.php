@@ -136,7 +136,7 @@
                 <!--début form group-->
                 <label for="inputAddress">Adresse</label>
                 <input name="adresse" type="text" class="form-control" id="inputAddress"
-                    placeholder="Rue,Appartement,Bâtiment,Secteur" required maxlength="5977"minlength="7">
+                    placeholder="Rue,Appartement,Bâtiment,Secteur" required maxlength="100" minlength="3">
                 <div class="valid-feedback">Looks good!</div>
                 <div class="invalid-feedback">Indiquez votre Adresse!!!</div>
                 <small id="" class="form-text text-muted"> Veuillez écrire votre adresse.</small>
@@ -148,7 +148,7 @@
             <div class="form-group col-md-12">
                 <label for="inputAddress2">Adresse 2</label>
                 <input name="adresse2" type="text" class="form-control" id="inputAddress2"
-                    placeholder="Rue,Appartement,Bâtiment,Secteur" maxlength="5977"minlength="7">
+                    placeholder="Rue,Appartement,Bâtiment,Secteur" maxlength="100" minlength="3">
                 <small id="" class="form-text text-muted"> Veuillez écrire votre adresse.</small>
             </div>
             </div>
@@ -156,12 +156,20 @@
 
             <div class="form-group row">
                 <!--début form group row-->
-                <div class="form-group col-md-12">
-                <label for="inputmetier">Quelle formation souhaitez-vous faire?</label>
+                <div class="form-group col-md-6">
+                <label for="inputmetier">Quelle formation souhaitez-vous faire (choix 1)? </label>
                 <input name="metier" type="text" class="form-control" id="" placeholder="menuisier/plombier........"
-                    required>
+                    required maxlength="25">
                 <div class="valid-feedback">Looks good!</div>
-                <div class="invalid-feedback">Indiquez votre Adresse!!!</div>
+                <div class="invalid-feedback">Indiquez votre choix!!!</div>
+                <small id="" class="form-text text-muted"> Veuillez écrire la la formation de votre choix.</small>
+            </div>
+            <div class="form-group col-md-6">
+                <label for="inputmetier">Quelle formation souhaitez-vous faire (choix 2)? </label>
+                <input name="metier2" type="text" class="form-control" id="" placeholder="menuisier/plombier........"
+                    required maxlength="25">
+                <div class="valid-feedback">Looks good!</div>
+                <div class="invalid-feedback">Indiquez votre choix!!!</div>
                 <small id="" class="form-text text-muted"> Veuillez écrire la la formation de votre choix.</small>
             </div>
             </div>
@@ -230,9 +238,9 @@
 
             <div class="form-group row ">
             <div class="form-group col-md-12">
-                <label for="datenaissance">Lieu de naissance: <span class="obj">(*)</span></label>
+                <label for="lieu_naissnace">Lieu de naissance: <span class="obj">(*)</span></label>
                 <input name="lieu_naissance" type="text" style="text-transform: uppercase" class="form-control"
-                    id="villenaissance" placeholder="BASSE-TERRE" required>
+                    id="villenaissance" placeholder="BASSE-TERRE"  maxlength="50" minlength=4 required >
                 <div class="valid-feedback">Looks good!</div>
                 <div class="invalid-feedback"> Indiquez votre lieux de naissance!!!</div>
                 <small id="" class="form-text text-muted">Écrire votre lieu de naissance.</small>
@@ -261,7 +269,7 @@
                 <div class="form-group col-md-4">
                     <div id="naissance">
                         <label for="start">Sélectionner votre date de naissance: <span class="obj">(*)</span></label>
-                        <input type="date" id="select" name="date" value="dd-mm-yyyy" min="01-01-1995" max=" 31-12-2021"
+                        <input type="date" id="select" name="date" value="" min="01-01-1995" max=" 31-12-2004"
                             required>
                         <div class="valid-feedback">Looks good!</div>
                         <div class="invalid-feedback">Veuillez Indiquez votre date de Naissance!!!</div>
@@ -278,7 +286,7 @@
                     <!--début col-6-->
                     <label for="inputville">Ville : <span class="obj">(*)</span></label>
                     <input name="ville" type="text" style="text-transform: uppercase" class="form-control"
-                        id="inputCity" placeholder="BAIE-MAHAULT" required required maxlength="50" minlength=4>
+                        id="inputCity" placeholder="BAIE-MAHAULT" required maxlength="50" minlength=4>
                     <div class="valid-feedback">Looks good!</div>
                     <div class="invalid-feedback">Veuillez Indiquez votre Ville!!!</div>
                     <small id="" class="form-text text-muted">Écrire votre ville.</small>
@@ -373,8 +381,8 @@
 
 
                 <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="" id="defaultCheck1" required>
-                    <label class="form-check-label" for="defaultCheck1">
+                    <input name="rgpd" class="form-check-input" type="checkbox" value="1" id="defaultCheck1" required>
+                    <label class="form-check-label" for="oui">
 
                         Acceptez-vous le RGPD? <a href="rgpd.php">lien vers le RGPD</a>
                     </label>
@@ -437,14 +445,14 @@
 
 
     <footer id="trois">
-        <div>
+        <div class="image">
             <img  src="img/sengager.png" alt="logo engagement" width="120px">
             <img  src="img/drapeaueurope.png" alt="" width="110px">
 
 
         </div>
 
-    </footer>
+    </footer> 
 
     <!-- Optional JavaScript; choose one of the two! -->
 

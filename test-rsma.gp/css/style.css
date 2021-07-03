@@ -1,61 +1,64 @@
 #first{
-height: 250px;
-
-}
-#titre{
-    text-align: center;
-}
-.logos{
-  
-    margin-top: 150px;
-    margin-left: 30px;
-   
-}
-
-
-
-#second{
-  
-    height: 450px;
-    margin-top:- 150px;
-}
-#texte{
-    margin-top: 50px;
-    text-align: center;
-    font-size: large;
-    font-style: italic;
-}
-
-
-
-#naissance{
-
-width: 600px;
-}
-
-#camps{
-    width: 350px;
-    height: 35px;
-}
-#boutton{
-    margin-top: 150px;
-    margin-left: 550px;
-    width: 150px;
-}
-
-#select{
-    width: 350px;
-    height: 35px;
-}
-
-.img{
-    width: 120px;
-}
-
-#trois{
-    margin-top: 90px;
-width: 1700px;
- height: 120px;
- margin-left: 500px;
-}
-
+    height: 250px;
+    
+    }
+    #titre{
+        text-align: center;
+    }
+    .logos{
+      
+        margin-top: 150px;
+        margin-left: 30px;
+       
+    }
+    
+    
+    
+    #second{
+      
+        height: 450px;
+        margin-top:- 150px;
+    }
+    #texte{
+        margin-top: 50px;
+        text-align: center;
+        font-size: large;
+        font-style: italic;
+    }
+    
+    
+    
+    #naissance{
+    
+    width: 600px;
+    }
+    
+    #camps{
+        width: 350px;
+        height: 35px;
+    }
+    #boutton{
+        margin-top: 150px;
+        margin-left: 550px;
+        width: 150px;
+    }
+    
+    #select{
+        width: 350px;
+        height: 35px;
+    }
+    
+    .img{
+        width: 120px;
+    }
+    
+    #trois{
+        margin-top: 90px;
+    width: 1700px;
+     height: 120px;
+     margin-left: 500px;
+    }
+    .image{
+        margin-top: 1100px;
+        margin-left: 650px;
+    }

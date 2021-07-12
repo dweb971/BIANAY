@@ -42,23 +42,25 @@ public $message;
         
         // test affichage 
         print_r($datasForm);
-        $this->civ=trim(htmlentities($datasForm["civ"]));
-        $this->nom=trim(htmlentities(strtoupper($datasForm["nom"])));
-        $this->prenom=trim(htmlentities(ucfirst($datasForm["prenom"])));
-        $this->email=trim(htmlentities(strtolower($datasForm["email"])));
-        $this->adresse=trim(htmlentities($datasForm["adresse"]));
-        $this->adresse2=trim(htmlentities($datasForm["adresse2"]));
-        $this->codepostal=trim(htmlentities($datasForm["code_postal"]));
-        $this->ville=trim(htmlentities(strtoupper($datasForm["ville"]))); 
-        $this->date=trim(htmlentities($datasForm["date"]));
-        $this->lieunaissance=trim(htmlentities(strtoupper($datasForm["lieu_naissance"])));
-        $this->metier=trim(htmlentities(ucfirst ($datasForm["metier"])));
-        $this->metier2=trim(htmlentities(ucfirst ($datasForm["metier2"])));
-        $this->niveau=trim(htmlentities($datasForm["niveau"]));
-        $this->jdc=trim(htmlentities($datasForm["jdc"]));
-        $this->question=trim(htmlentities($datasForm["question"]));
-        $this->rgpd=trim(htmlentities($datasForm["rgpd"]));
+        $this->setCiv(trim(htmlentities($datasForm["civ"])));
+        $this->setNom(trim(htmlentities(strtoupper($datasForm["nom"]))));
+        $this->setPrenom(trim(htmlentities(ucfirst($datasForm["prenom"]))));
+        $this->setEmail(trim(htmlentities(strtolower($datasForm["email"]))));
+        $this->setAdresse(trim(htmlentities($datasForm["adresse"])));
+        $this->setAdresse2(trim(htmlentities($datasForm["adresse2"])));
+        $this->setCodepostal(trim(htmlentities($datasForm["code_postal"])));
+        $this->setVille(trim(htmlentities(strtoupper($datasForm["ville"])))); 
+        $this->setDate(trim(htmlentities($datasForm["date"])));
+        $this->setLieu_naissance(trim(htmlentities(strtoupper($datasForm["lieu_naissance"]))));
+        $this->setMetier(trim(htmlentities(ucfirst ($datasForm["metier"]))));
+        $this->setMetier2(trim(htmlentities(ucfirst ($datasForm["metier2"]))));
+        $this->setNiveau(trim(htmlentities($datasForm["niveau"])));
+        $this->setJdc(trim(htmlentities($datasForm["jdc"])));
+        $this->setQuestion(trim(htmlentities($datasForm["question"])));
+        $this->setRgpd(trim(htmlentities($datasForm["rgpd"])));
 
+
+        //echo $this->getLieu_naissance();
       
 
         
@@ -71,16 +73,17 @@ public $message;
 
 
      $dbh = $this->get_DBConnect()->query($reqIP);
-     // $idPatient = $this->get_DBConnect()->lastInsertId() ;
+     $inscriptionID= $this->get_DBConnect()->lastInsertId() ;
 
+     print_r($dbh);
 
 
      // executer envoyer_mail()
-     //$this->envoyer_mail();
+     $this->envoyer_mail($inscriptionID);
 
  
  }
- public function envoyer_mail(){
+ public function envoyer_mail(int $id){
      /*
             - adresse expedition       (moi == le serveur)
             - adresse destination      $this->email
@@ -90,36 +93,43 @@ public $message;
             - prenom                   $this->prenom
         */
           // Le message
-          $this->message = "Bonjour $this->nom $this->prenom , \r\nMerci pour votre inscription, voici le lien qui vous permettra d'accéder au test : 
-          https://test-rsma.gp/index.html.";
+          //cryptage url
+          $prenom = $this->getPrenom();
+          $nom = $this->getNom();
+          $this->setMessage("Bonjour $nom $prenom , \r\nMerci pour votre inscription, voici le lien qui vous permettra d'accéder au test : 
+          https://test-rsma.gp/index.php?idIn=".$id);
 
           // Dans le cas où nos lignes comportent plus de 70 caractères, nous les coupons en utilisant wordwrap()
-          $this->message = wordwrap($this->message, 70, "\r\n");
+          $this->setMessage(wordwrap($this->getMessage(), 70, "\r\n"));
           
           // Envoi du mail
 
-          if( mail($this->email, 'Lien test', $this->message) === true ){
+          //mail("bianayjenny@gmail.com", 'Lien test', $this->getMessage());
+
+          $email = $this->getEmail();
+
+         /* if( mail($email, 'Lien test', $this->getMessage()) === true ){
              // echo "Email envoyé à $this->email" ;
              header('Location: confirmation.php');
-exit;
-  
+
           } else {
               echo "Echec envoi email à $this->email";
   
-          }
+          }*/
 
-            $to      = $this->email;
-            $subject = 'le sujet';
-            $message = $this->message;
-            $headers = 'From: webmaster@example.com' . "\r\n" .
-            'Reply-To: webmaster@example.com' . "\r\n" .
+            $to      = $email;
+            $subject = 'Lien test';
+            $message = $this->getMessage();
+            $headers = 'From: webmaster@test-rsma.gp' . "\r\n" .
+            'Reply-To: webmaster@test-rsma.gp' . "\r\n" .
             'X-Mailer: PHP/' . phpversion();
 
             if( mail($to, $subject, $message, $headers) === true ){
-                echo "Email envoyé à $this->email" ;
+                //echo "Email envoyé à $this->email" ;
+                header('Location: confirmation.php');
     
             } else {
-                echo "Echec envoi email à $this->email";
+                //echo "Echec envoi email à $this->email";
     
             }
   

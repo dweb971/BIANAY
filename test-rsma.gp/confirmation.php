@@ -85,7 +85,7 @@
         <!--fin row -->
 
        <div class="row">
-           <div class="col-12">
+           <div class="col-12" id=texte>
  <p> Votre inscription à été prise , vous recevrez un mail intégrant un lien de redirection qui vous dirigera sur le test</p>
 
            </div>

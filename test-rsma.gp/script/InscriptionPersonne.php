@@ -108,14 +108,14 @@ public $message;
 
           $email = $this->getEmail();
 
-         /* if( mail($email, 'Lien test', $this->getMessage()) === true ){
+          if( mail($email, 'Lien test', $this->getMessage()) === true ){
              // echo "Email envoyé à $this->email" ;
              header('Location: confirmation.php');
 
           } else {
               echo "Echec envoi email à $this->email";
   
-          }*/
+          }
 
             $to      = $email;
             $subject = 'Lien test';

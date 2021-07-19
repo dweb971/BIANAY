@@ -22,7 +22,9 @@
             <!-- début div row-->
             <div class="col-md-9">
                 <!--début col-9-->
-                <img src="img/logo.png" alt="logo-rsma" width=300px;>
+                <a href="https://www.rsma.gp/">
+                <img src="img/logo.png" alt="logo-rsma" width="300px">
+                </a>
             </div>
             <!--fin div 9-->
             <div class="col-md-1">
@@ -134,7 +136,7 @@
             <div class="form-row">
                 <!-- début form row-->
                 <div class="form-group col-md-8">
-                    <!--début col-6-->
+                    <!--début col-8-->
                     <label for="inputville">Ville : <span class="obj">(*)</span></label>
                     <input name="ville" type="text" style="text-transform: uppercase" class="form-control"
                         id="inputCity" placeholder="BAIE-MAHAULT" required maxlength="50" minlength=4>
@@ -142,9 +144,9 @@
                     <div class="invalid-feedback">Veuillez Indiquez votre Ville!!!</div>
                     <small id="" class="form-text text-muted">Écrire votre ville.</small>
                 </div>
-                <!--fin col-6-->
+                <!--fin col-8-->
                 <div class="form-group col-md-4">
-                    <!--debut col-2-->
+                    <!--debut col-4-->
                     <label for="inputZip"> Code postal:<span class="obj">(*)</span></label>
                     <input name="code_postal" type="tel" class="form-control" id="inputZip" placeholder="Code postal: 97139"
                         required pattern="[0-9]{5}">
@@ -184,7 +186,7 @@
                     <label class="form-check-label" for="">Oui </label>
                 </div>
                 <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="niveau" id="niveau2" value="non" required>
+                    <input class="    </div>form-check-input" type="radio" name="niveau" id="niveau2" value="non" required>
                     <label class="form-check-label" for="">Non </label>
                 </div>
                 <div class="valid-feedback">Looks good!</div>
@@ -216,7 +218,7 @@
             </div>
             <!--fin form group-->
             <div class="form-group row ">
-            <div class="form-group col-md-12">
+            <div class="form-group col-md-8">
                 <label for="lieu_naissnace">Lieu de naissance: <span class="obj">(*)</span></label>
                 <input name="lieu_naissance" type="text" style="text-transform: uppercase" class="form-control"
                     id="villenaissance" placeholder="BASSE-TERRE"  maxlength="50" minlength=4 required >
@@ -224,23 +226,11 @@
                 <div class="invalid-feedback"> Indiquez votre lieux de naissance!!!</div>
                 <small id="" class="form-text text-muted">Écrire votre lieu de naissance.</small>
                 </div>
-            </div>
-            <!--fin form group-->
-            <!--FIN div -->
-            <div class="form-row">
-                <div class="form-group col-md-8">
-                    <label for="exampleInputEmail1"> Adresse Email: <span class="obj">(*)</span></label>
-                    <input name="email" style="text-transform:  lowercase" type="email" class="form-control"
-                        id="exampleInputEmail1" aria-describedby="emailHelp" required maxlength="5977" minlength="7"
-                        placeholder="thierrydore@gmail.com">
-                    <div class="valid-feedback">Looks good!</div>
-                    <div class="invalid-feedback">Indiquez votre Email!!!</div>
-                    <small id="emailHelp" class="form-text text-muted">Veuillez renseigner votre Email.</small>
-                </div>
+
                 <div class="form-group col-md-4">
                     <div id="naissance">
                         <label for="start">Sélectionner votre date de naissance: <span class="obj">(*)</span></label>
-                        <input type="date" id="select" name="date" value="" min="01-01-1995" max=" 31-12-2004"
+                        <input type="date" id="select" name="date" value="00-00-0000" min="01-01-1995" max=" 31-12-2004"
                             required>
                         <div class="valid-feedback">Looks good!</div>
                         <div class="invalid-feedback">Veuillez Indiquez votre date de Naissance!!!</div>
@@ -248,8 +238,18 @@
                     </div>
                 </div>
             </div>
-            <!--fin div-->
+            <!--fin form group-->
+            <!--FIN div -->
             <div class="form-row">
+                <div class="form-group col-md-8">
+                    <label for="exampleInputEmail1"> Adresse Email: <span class="obj">(*)</span></label>
+                    <input name="email" style="text-transform:lowercase" type="email" class="form-control"
+                        id="exampleInputEmail1" aria-describedby="emailHelp" required maxlength="5977" minlength="7"
+                        placeholder="thierrydore@gmail.com">
+                    <div class="valid-feedback">Looks good!</div>
+                    <div class="invalid-feedback">Indiquez votre Email!!!</div>
+                    <small id="emailHelp" class="form-text text-muted">Veuillez renseigner votre Email.</small>
+                </div>
                 <div class="form-group col-md-4">
                     <!--debut col-4-->
                     <label for="inputState">Où avez-vous connue le RSMA? : <span class="obj">(*)</span></label>
@@ -273,7 +273,11 @@
                         <input name="infoAutre" type="text" class="form-control" id="oA" aria-describedby=""
                             placeholder="Ecrire informations complémentaires">
                     </div>
-                </div>
+
+
+            </div>
+            <!--fin div-->
+          
 </div>
                 <!--fin form group row-->
                 <script>
@@ -341,7 +345,7 @@
         </script>
 </div>
 </div>
-    </div>
+  
     <!--fin du container -->
     <footer id="trois">
         <div class="image">

@@ -1,7 +1,7 @@
 POLITIQUE DE CONFIDENTIALITÉ
 
 
-nomdedomaine.ext
+test-rsma.gp
 France FRANCE
 
 Type de site : application web
